@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>login page</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<style>
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+        display: flex;
+        overflow: auto;
+        min-height: 100vh;
+        /* overflow: hidden; */
+    }
+    .container2, .container1{
+        width: 100%;
+    }
+    /* .container2{
+        height: 100%;
+    } */
+    /* .container1,
+    .container2 {
+        
+        display: inline-block;
+    } */
+/* 
+    .container1 {
+        position: relative;
+        left: 40px;
+        bottom: 30px
+    } */
+
+    .btm-left1 {
+        position: absolute;
+        bottom: 140px;
+        left: 96px;
+        color: white;
+    }
+
+    img {
+        height: 100%;
+        border-radius: 20px;
+        width: 100%;
+        /* margin: 40px; */
+    }
+
+    #pw,
+    #username, #email {
+        border-radius: 30px;
+    }
+
+    .login-btn {
+        /* position: relative; */
+        border: 0px;
+        border-radius: 30px;
+        width: 150px;
+        background-color: #f7785b;
+        /* left: 150px;
+        top: 40px; */
+    }
+
+    /* .container2 {
+        position: relative;
+        top: 188px;
+        width: 400px;
+        left: 270px */
+    
+    
+    .welcome-line {
+        text-align: center;
+    }
+
+    .toggle {
+        border: 1px solid #b8b6b6;
+        width: 200px;
+        border-radius: 30px;
+        height: 39px;
+        /* left: 200px; */
+        background-color: #b8b6b6;
+        margin-left: 100px;
+    }
+
+    .tog-log,
+    .tog-reg {
+        display: inline-block;
+        color: black;
+        width: 90px;
+        /* width: 100px; */
+    }
+    .tog-log{
+        border: 1px solid #f97153;
+        border-radius: 30px;
+        /* padding: 0px 5px 2px 5px; */
+        background-color: #f97153;
+        text-align: center;
+    }
+    /* .tog-log {
+        border: 1px solid #f97153;
+        border-radius: 30px;
+        width: 90px;
+        text-align: center;
+        background-color: #f97153;
+    } */
+    .container2{
+        /* height: 100%; */
+        min-height: 100vh;
+        /* margin: 130px 0px 80px 50px; */
+        display: flex;
+        align-items: center;
+        padding: 50px;
+    }
+    input {
+        height: 50px;
+    }
+    .wrapper{
+        position: relative;
+        height: 100%;
+        padding: 50px 50px 0px 50px;
+    }
+    .login{
+        padding: 10px;
+        text-align: center;
+        padding-right: 30px;
+    }
+    .field-names{
+        text-align: left;
+    }
+    .btn{
+        display: flex;
+        justify-content: end;
+        text-align: right;
+    }
+</style>
+
+<body>
+    <div class="container1">
+        <div class="wrapper">
+        <img src="https://www.ulcdn.net/images/taxon_images/taxon/305/taxon_col_3/Lounge-chairs.jpg" alt="img">
+        <h1 class="btm-left1">Lorem ipsum dolor sit.</h1>
+        </div>
+        
+
+    </div>
+
+
+
+    <div class="container2">
+        <div class="login">
+            <p class="welcome-line">Welcome to Lorem...!</p>
+            <div class="toggle">
+                <p class="tog-log">Login</p>
+                <p class="tog-reg">Register</p>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="mb-3 field-names">
+                <label for="formGroupExampleInput" class="form-label">User name</label>
+                <input id="username" type="text" class="form-control" placeholder="Enter your username">
+            </div>
+            <div class="mb-3 field-names">
+                <label for="formGroupExampleInput2" class="form-label">Password</label>
+                <input id="pw" type="password" class="form-control" placeholder="Enter your password">
+            </div>
+            <div class="form-check field-names">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                    Remember me
+                </label>
+            </div>
+            <div class="btn">
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+          
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Table</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .heading {
+        position: relative;
+    }
+
+    p {
+        color: rgb(154, 152, 152);
+        margin-top: 50px;
+        margin-left: 90px;
+    }
+
+    h3 {
+        margin-top: 50px;
+        margin-left: 90px;
+    }
+
+    .refresh,
+    .arrow,
+    .dots {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icons {
+        position: absolute;
+        right: 190px;
+        top: 50px;
+    }
+
+    th {
+        font-weight: 500;
+        font-size: 19px;
+    }
+
+    .tog {
+        width: 40px;
+        height: 40px;
+        margin: 0px 0px 0px 0px;
+    }
+    .outer-cont{
+        width: 90%;
+        height: 100%;
+        margin-left: 40px;
+    }
+    table{
+        width: 100%;
+        border: 0.5px solid rgb(204, 204, 204);
+    }
+    td{
+        height: 20px;
+        font-size: 17px;
+    }
+    thead{
+        height: 50px;
+        padding-bottom: 5px;
+    }
+    .highlight{
+        color: black;
+    }
+    .switch{
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 28px;
+        margin: 0px 10px;
+    }
+    .slider{
+         position:absolute;
+         cursor: pointer;
+         top: 0;
+         right: 0;
+         left: 0;
+         bottom: 0;
+         background-color: #ccc;
+         transition: 2s;
+         border-radius: 34px;
+    }
+    .switch input{display:none}
+
+    .slider:before{
+        position:absolute;
+        content: "";
+        width: 20px;
+        height: 20px;
+        left: 5px;
+        bottom: 5px ;
+        background-color: #fff;
+        transition: 0.4s;
+        border-radius: 50px;
+    }
+    input:checked + .slider{
+        background-color:chartreuse;
+    }
+    input:checked + .slider:before{
+        transform:translateX(20px);
+    }
+</style>
+
+<body>
+
+    <div class="outer-cont">
+        <div class="heading">
+            <h3>Cross-channel Analysis</h3>
+            <p>Showing results <span class="highlight" >198</span> from <span class="highlight" >893</span> results</p>
+        </div>
+
+        <div class="icons">
+            <img class="refresh"
+                src="https://cdn-icons.flaticon.com/png/512/3161/premium/3161390.png?token=exp=1656865706~hmac=83a02051b1d943985ee4d9fd2029710c"
+                alt="refresh">
+
+            <img class="arrow"
+                src="https://cdn-icons.flaticon.com/png/512/2990/premium/2990125.png?token=exp=1656866075~hmac=cf32f9c57f08f35430ca56343ddfb164"
+                alt="arrow">
+
+            <img class="dots"
+                src="https://cdn-icons.flaticon.com/png/512/1477/premium/1477110.png?token=exp=1656866181~hmac=ec833d2961b68ddb1b58f3ca21b11650"
+                alt="dots">
+        </div>
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Header</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Spend</th>
+                        <th scope="col">Clicks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons.flaticon.com/png/512/5683/premium/5683514.png?token=exp=1656946103~hmac=70f90e52f4517e3471045dfd055fc4f5" alt=""> -->
+                        </th>
+                        <td>DT-Brand-campaign</td>
+                        <td>$1,718.56</td>
+                        <td>12345</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>new_offer_8735</td>
+                        <td>$1,571.63</td>
+                        <td>12345</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>spring_2020</td>
+                        <td>$956.54</td>
+                        <td>12345</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider" > </span>
+                            </label>
+                        </th>
+                        <td>UK_brand_DT_campaign</td>
+                        <td>$1,133.69</td>
+                        <td>677</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>AU-DT-offer-2394</td>
+                        <td>$1,672.93</td>
+                        <td>248</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>GR-DT-brand-12</td>
+                        <td>$704.13</td>
+                        <td>2,300</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>Second-offer-EU</td>
+                        <td>$1,694.09</td>
+                        <td>145</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog"
+                                src="https://cdn-icons.flaticon.com/png/512/5720/premium/5720465.png?token=exp=1656868468~hmac=3915b47c65398cc11aa9910f9b31888e"
+                                alt=""> -->
+                        </th>
+                        <td>Follow-Fav-Teams-2020</td>
+                        <td>$1,501.84</td>
+                        <td>805</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>Resubscription-offer-20</td>
+                        <td>$1,542.24</td>
+                        <td>1,706</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                        </th>
+                        <td>DT-Brand-campaign-main</td>
+                        <td>$1,568.37</td>
+                        <td>2,001</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                        </th>
+                        <td>Dave-Portnoy-campaign-20</td>
+                        <td>$1,493.87</td>
+                        <td>1,706</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog"
+                                src="https://cdn-icons.flaticon.com/png/512/5720/premium/5720465.png?token=exp=1656868468~hmac=3915b47c65398cc11aa9910f9b31888e"
+                                alt=""> -->
+                        </th>
+                        <td>Sport-aud-second-offer</td>
+                        <td>$704.83</td>
+                        <td>1,007</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog" src="https://cdn-icons-png.flaticon.com/512/7835/7835681.png" alt=""> -->
+                        </th>
+                        <td>IT-DT-brand-19-2</td>
+                        <td>$1,054.87</td>
+                        <td>1,885</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <label class="switch">
+                                <input type="checkbox" checked>
+                                <span class="slider" > </span>
+                            </label>
+                            <!-- <img class="tog"
+                                src="https://cdn-icons.flaticon.com/png/512/5720/premium/5720465.png?token=exp=1656868468~hmac=3915b47c65398cc11aa9910f9b31888e"
+                                alt=""> -->
+                        </th>
+                        <td>DT-Brand-campaign-test</td>
+                        <td>$856.53</td>
+                        <td>1,461</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

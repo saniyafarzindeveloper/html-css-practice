@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <!-- CSS only -->
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<style>
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        display: flex;
+    }
+
+    .main-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bg-img {
+        width: 100%;
+        height: 250px;
+    }
+
+    .bg {
+        position: relative;
+    }
+
+    .edit {
+        position: absolute;
+        right: 40px;
+        top: 10px;
+        background-color: white;
+        /* opacity: 0.5; */
+        height: 27px;
+    }
+
+    .edit-wp {
+        margin: 0px 0px 0px 0px;
+        padding: 0px 3px 3px 3px;
+        font-weight: 500px;
+    }
+
+    .profile-pic {
+        position: absolute;
+        width: 200px;
+        border-radius: 100px;
+        top: 150px;
+        left: 30px;
+    }
+
+    .name {
+        position: absolute;
+        top: 340px;
+        left: 30px;
+        font-size: 24px;
+    }
+
+    .post {
+        position: absolute;
+        font-weight: 300;
+        top: 370px;
+        left: 45px;
+        font-size: 15px;
+    }
+
+    .info-list {
+        position: absolute;
+        top: 400px;
+        /* list-style: none; */
+        font-size: 18px;
+        padding-top: 7px;
+    }
+
+    .pic {
+        position: absolute;
+        top: 500px;
+        left: 45px;
+        font-size: 35px;
+    }
+
+    .cont {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .info {
+
+        width: 350px;
+        height: 200px;
+        margin-top: 90px;
+        margin-left: 40px;
+    }
+
+    .my-profile {
+        background-color: rgb(232, 232, 232);
+        width: 100%;
+        height: 100%;
+        margin-left: 50px;
+        margin-top: 30px;
+        margin-right: 20px;
+        border-radius: 12px;
+    }
+
+    .my-prof-heading {
+        font-size: 30px;
+        padding-left: 40px;
+        padding-top: 20px;
+    }
+
+    .brown-bg {
+        border-radius: 3px;
+        font-size: 20px;
+        width: 92%;
+        background-color: rgb(231, 155, 193);
+        margin: 20px;
+        margin-bottom: 0px;
+        height: 50px;
+        padding-left: 30px;
+        padding-top: 16px;
+        text-align: left;
+    }
+
+    .bg-white {
+        font-size: 17px;
+        background-color: #fff;
+        height: 300px;
+        padding: 10px;
+        width: 93%;
+        margin-left: 20px;
+    }
+
+    .cont2 {
+        display: flex;
+        flex-direction: row;
+        /* margin: 20px; */
+        width: 100%;
+        height: 750px;
+        justify-content: right;
+        margin-top: 40px;
+        margin-right: 50px;
+    }
+
+    /* .my-pics {
+        background-color: aquamarine;
+        width: 400px;
+        height: 700px;
+    } */
+
+    .more-dets {
+        background-color: rgb(232, 232, 232);
+        width: 72%;
+        height: 100%;
+        margin-right: 20px;
+        /* margin-top: 40px; */
+        /* margin-left: 10px; */
+        /* margin-left: 360px; */
+        border-radius: 8px;
+    }
+
+    .more-dets-heading {
+        padding-top: 20px;
+        font-size: 30px;
+        padding-left: 40px;
+
+    }
+    .wrapper-tabs{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .heading-tab {
+        margin-top: 0px;
+        /* display: inline-block; */
+        display: flex;
+        justify-content: center;
+        padding: 0px 25px 0px 25px;
+        font-size: 22px;
+        color: rgb(165, 8, 87);
+        overflow-x: auto;
+    }
+
+    .heading-tab1 {
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+        padding: 0px 30px 0px 30px;
+        font-size: 22px;
+        color: rgb(165, 8, 87);
+        text-decoration: underline;
+        overflow-x: auto;
+    }
+
+    .more-dets-table {
+        background-color:#fff;
+        width: 95%;
+        height: 600px;
+        margin-left: 20px;
+        border-radius: 7px;
+
+    }
+
+    table {
+        /* table-layout: fixed; */
+        border-collapse: separate;
+        border-spacing: 0 1em;
+        width: 100%;
+        height: 100%;
+        border: none;
+        /* border-collapse: collapse; */
+        font-size: 18px;
+        text-align: left;
+        padding: 18px;
+        /* margin-left: 20px; */
+    }
+
+    tr {
+        background-color: rgb(231, 155, 193);
+        border-radius: 19px;
+        width: 100%;
+    }
+
+    .my-pics-style {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 350px;
+
+    }
+
+    .heading-pics {
+        /* position: absolute; */
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .my-pics {
+        display: flex;
+        flex-direction: column;
+        margin-top: 200px;
+    }
+
+    .wrapper {
+        padding: 20px;
+    }
+
+    .accordion-item {
+        margin: 30px;
+    }
+    /* h2#headingOne.accordion-header{
+        color: blueviolet;
+    } */
+    /* .accordion-item {
+    background-color:#000;
+} */
+</style>
+
+<body>
+    <div class="main-container">
+
+        <!--starting with the background -->
+        <div class="bg">
+            <img class="bg-img"
+                src="https://img.freepik.com/free-vector/pink-flower-frame-background-with-watercolor_65186-2566.jpg?w=360"
+                alt="">
+            <div class="edit">
+                <p class="edit-wp">Edit wallpaper</p>
+            </div>
+        </div>
+
+        <!-- adding profile -->
+        <div class="profile">
+            <img class="profile-pic" src="https://i.pinimg.com/736x/88/ce/ba/88ceba92f64a3e77af1d5811f151d449.jpg"
+                alt="profile-pic">
+        </div>
+
+
+
+        <!-- adding info -->
+        <div class="cont">
+
+            <div class="info">
+                <h3 class="name">Chandri Anggara</h3>
+                <p class="post">Junior UI/UX Designer</p>
+                <ul class="info-list">
+                    <li class="main-info">Figura Malta</li>
+                    <li class="main-info">Female / ID: 45rd34fh</li>
+                    <li class="main-info">Seeking: no data</li>
+                    <li class="main-info">2022-02-03</li>
+                </ul>
+
+                <div class="my-pics">
+                    <h3 class="heading-pics">
+                        My pictures
+                    </h3>
+                    <img class="my-pics-style"
+                        src="https://i.pinimg.com/736x/88/ce/ba/88ceba92f64a3e77af1d5811f151d449.jpg" alt="">
+                    <img class="my-pics-style"
+                        src="https://i.pinimg.com/736x/88/ce/ba/88ceba92f64a3e77af1d5811f151d449.jpg" alt="">
+                    <img class="my-pics-style"
+                        src="https://i.pinimg.com/736x/88/ce/ba/88ceba92f64a3e77af1d5811f151d449.jpg" alt="">
+                </div>
+
+            </div>
+
+            <!-- my profile -->
+            <!-- <div class="my-profile">
+                
+                <div class="brown-bg">Personal information</div>
+                <div class="bg-white">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Provident modi ducimus tenetur ex, voluptatibus veniam explicabo enim qui iusto non.
+                    Quidem possimus perspiciatis maxime ipsam ipsum cum porro quia ea esse.
+                    Dolor tenetur culpa velit impedit vitae deleniti officia sed dignissimos aperiam,
+                    iure veritatis, sequi assumenda ex recusandae fugit temporibus.
+                </div>
+                <div class="brown-bg">About me</div>
+                <div class="brown-bg">Looking for</div>
+            </div>
+        </div> -->
+
+            <div class="my-profile">
+                <h3 class="my-prof-heading">My profile</h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Personal information
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the first item's accordion body.</strong> It is shown by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                About me
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the second item's accordion body.</strong> It is hidden by default,
+                                until the collapse plugin adds the appropriate classes that we use to style each
+                                element. These classes control the overall appearance, as well as the showing and hiding
+                                via CSS transitions. You can modify any of this with custom CSS or overriding our
+                                default variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Looking for
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <strong>This is the third item's accordion body.</strong> It is hidden by default, until
+                                the collapse plugin adds the appropriate classes that we use to style each element.
+                                These classes control the overall appearance, as well as the showing and hiding via CSS
+                                transitions. You can modify any of this with custom CSS or overriding our default
+                                variables. It's also worth noting that just about any HTML can go within the
+                                <code>.accordion-body</code>, though the transition does limit overflow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            
+            </div>
+
+
+                 <div class="cont2">
+
+                    <div class="more-dets">
+                        <h3 class="more-dets-heading">More details</h3>
+
+                        <div class="wrapper-tabs">
+                        <p class="heading-tab1">Appearance</p>
+                        <p class="heading-tab">Personality</p>
+                        <p class="heading-tab">Background</p>
+                        <p class="heading-tab">Life style</p>
+                        <p class="heading-tab">Language</p>
+                        <p class="heading-tab">Domain</p>
+                        </div>
+
+        
+                        <div class="more-dets-table" >
+                            <div class="more-dets-table">
+                                <table cellspacing="5px">
+                                    <tr>
+                                        <td>Height</td>
+                                        <td>155</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Body look</td>
+                                        <td>Attractive</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Body type</td>
+                                        <td>Skinny</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Body weight</td>
+                                        <td>45kgs</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Disability</td>
+                                        <td>None</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Eye wear</td>
+                                        <td>Glasses</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Facial hair</td>
+                                        <td>None</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Hair color</td>
+                                        <td>Brown</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Skin tone</td>
+                                        <td>Fair</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Disability</td>
+                                        <td>None</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Hair type</td>
+                                        <td>Straight</td>
+                                    </tr>
+    
+                                    <tr>
+                                        <td>Hair length</td>
+                                        <td>Long</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+
+        </div>
+
+</body>
+
+</html>
